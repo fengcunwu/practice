@@ -95,12 +95,15 @@ void Test3()
 
 	cout << sum_money << endl;
 }
+
 int main()
 {
 	//Test1();//美国节日
 	//Test2();//分解因数
 	//Test3();//淘宝网店
-	test3();
+	//test3();
+	//Test4();//字符串查找
+	Test4_KMP();
 	system("pause");
 	return 0;
 }
