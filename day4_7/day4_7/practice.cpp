@@ -104,3 +104,27 @@ void Print(int year, std::vector<int>& months, int WeedDay_CurYear)
 	str2 = "25";
 	PrintLine(year, str1, str2);
 }
+
+bool IsPrime(int num)
+{
+	if (num < 2)
+		return false;
+	if (num == 2)
+		return true;
+	for (int i = 2; i < num; i++)
+	{
+		if (num % i == 0)
+			return false;
+	}
+	return true;
+}
+
+void PrintPrime(int num)
+{
+	for (int i = 2; i <= num; i++)
+	{
+		if (IsPrime(i))
+			cout << i << " ";
+	}
+	cout << endl;
+}
