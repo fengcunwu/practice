@@ -24,3 +24,14 @@ void Test_Day4_10_1()
 		cout << sum << endl;
 	}
 }
+
+void isOK(){
+	int i = 0;
+	cout << &i << endl;
+	isOK();
+}
+//测试系统栈的大小
+void Test_Day4_10_2()
+{
+	isOK();
+}
