@@ -47,14 +47,14 @@ bool match_dp(string str, string str1)
 	int l2 = str1.size();
 	vector<vector<bool> > dp(l1 + 1, vector<bool>(l2 + 1, false));
 	dp[0][0] = true;
-	for (int i = 1; i<l1 + 1; i++)
+	for (int i = 1; i < l1 + 1; i++)
 	{
-		if (str[i - 1] == '*') 
+		if (str[i - 1] == '*')
 			dp[i][0] = dp[i - 1][0];
 	}
-	for (int i = 1; i<l1 + 1; i++)
+	for (int i = 1; i < l1 + 1; i++)
 	{
-		for (int j = 1; j<l2 + 1; j++)
+		for (int j = 1; j < l2 + 1; j++)
 		{
 			if (str[i - 1] == '*')//ÄÜÆ¥Åä¶à¸ö
 			{
@@ -66,4 +66,5 @@ bool match_dp(string str, string str1)
 			}
 		}
 	}
+	return dp[l1][l2];
 }
