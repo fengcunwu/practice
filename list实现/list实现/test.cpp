@@ -76,9 +76,9 @@ using namespace std;
 template<class T>
 void PrintList(const List<T>& lt)
 {
-	auto it = lt.Begin();
+	auto it = lt.CBegin();
 	//*it = 10;//const不能改变其内容
-	while (it != lt.End())
+	while (it != lt.CEnd())
 	{
 		cout << *it << " ";
 		++it;
@@ -92,8 +92,15 @@ int main()
 	for (int i = 0; i < 5; i++)
 		lt.PushFront(i);
 	lt.PopFront();
-	lt.PrintList();
 	PrintList(lt);
+	List<int>::iterator it = lt.Begin();
+	++it;
+	//lt.Insert(it, 1);
+	PrintList(lt);
+	List<int> lts(lt);
+	List<int> lts2 = lts;
+	PrintList(lts);
+	PrintList(lts2);
 	system("pause");
 	return 0;
 }
