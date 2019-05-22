@@ -470,7 +470,8 @@ void TestHashTable()
 	cout << "桶的个数 : " << ht.BucketCount() << endl;
 	cout << "4号桶的大小为 : " << ht.BucketSize(4) << endl;
 #endif
-#if 0
+
+
 	//测试插入重复
 	int array[] = { 1, 3, 4, 5, 2, 13, 31, 25, 75, 87, 1, 65, 76, 17, 4 };
 	HashTable<int, KeyOfValue, KeyToInt<int>> ht;
@@ -493,5 +494,4 @@ void TestHashTable()
 	ht.PrintHashTable();
 	cout << "桶的个数 : " << ht.BucketCount() << endl;
 	cout << "4号桶的大小为 : " << ht.BucketSize(4) << endl;
-#endif
 }
