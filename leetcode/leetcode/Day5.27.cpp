@@ -31,6 +31,7 @@ string longestCommonPrefix(vector<string>& strs) {
 
 
 //leetcode --- 7 整数翻转
+//自己解法可以实现简单的翻转，但是没有处理溢出问题，
 int reverse(int x)
 {
 	bool flag = true;
@@ -58,3 +59,4 @@ int reverse(int x)
 
 	return temp;
 }
+
