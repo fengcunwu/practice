@@ -8,7 +8,8 @@ int main()
 	s1->p();
 	cout << s1 << endl;
 	CSingleton* s2 = CSingleton::GetInstance();
-	cout << s2 << endl; 
+	s2->p();
+	cout << s2 << endl;
 	system("pause");
 	return 0;
 }
