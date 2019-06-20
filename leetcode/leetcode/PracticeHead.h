@@ -123,4 +123,18 @@ int mySqrt_op(int x);
 int climbStairs(int n);
 
 // leetcode 83. 删除排序链表中的重复元素
-ListNode* deleteDuplicates(ListNode* head)
+ListNode* deleteDuplicates(ListNode* head);
+
+
+///////////////////day6.18///////////////
+struct TreeNode {
+	int val;
+	TreeNode *left;
+	TreeNode *right;
+	TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+//leetcode 100 --- 相同的树
+//递归的方式
+bool isSameTree_OP(TreeNode* p, TreeNode* q);
+//非递归的方式
+bool isSameTree(TreeNode* p, TreeNode* q);
